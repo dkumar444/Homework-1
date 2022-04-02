@@ -1,0 +1,31 @@
+from math import ceil
+
+print("Enter amount of lemon juice (in cups):")
+amount_juice = int(input())
+print("Enter amount of water (in cups):")
+amount_water = int(input())
+print("Enter amount of agave nectar (in cups):")
+amount_nectar = float(input())
+print("How many servings does this make?")
+amount_serving = int(input())
+print()
+print(f"Lemonade ingredients - yields {amount_serving:.2f} servings")
+print(f"{amount_juice:.2f} cup(s) lemon juice")
+print(f"{amount_water:.2f} cup(s) water")
+print(f"{amount_nectar:.2f} cup(s) agave nectar")
+
+print()
+print("How many servings would you like to make?")
+new_serving = int(input())
+
+print()
+print(f"Lemonade ingredients - yields {new_serving:.2f} servings")
+print(f"{ceil((amount_juice/amount_serving)*new_serving):.2f} cup(s) lemon juice")
+print(f"{ceil((amount_water/amount_serving)*new_serving):.2f} cup(s) water")
+print(f"{((amount_nectar/amount_serving)*new_serving):.2f} cup(s) agave nectar")
+
+print()
+print(f"Lemonade ingredients - yields {new_serving:.2f} servings")
+print(f"{((ceil((amount_juice/amount_serving)*new_serving))/16):.2f} gallon(s) lemon juice")
+print(f"{((ceil((amount_water/amount_serving)*new_serving))/16):.2f} gallon(s) water")
+print(f"{((ceil((amount_nectar/amount_serving)*new_serving))/16):.2f} gallon(s) agave nectar")
